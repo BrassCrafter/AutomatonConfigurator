@@ -1,17 +1,22 @@
-public class Language {
-    char[] language;
-    public Language(char[] language){
-        this.language = language;
+public class Alphabet {
+    char[] alphabet;
+    public Alphabet(char[] alphabet){
+        this.alphabet = alphabet;
     }
-    public char[] getLanguage(){
-        return language;
+    public char[] getAlphabet(){
+        return alphabet;
     }
-    public c
+    public boolean isInAlphabet(char character){
+        for(int i = 0; i < alphabet.length; i++)
+            if(alphabet[i] == character)
+                return true;
+        return false;
+    }
 
     public static void main(String[] args) {
-        char[] langArr = new char[]{'a', 'b', 'c'};
-        Language language = new Language(langArr);
-        for(int i = 0; i < language.getLanguage().length; i++)
-            System.out.println(language.getLanguage()[i]);
+        char[] alphabetArr = new char[]{'a', 'b', 'c'};
+        Alphabet alphabet = new Alphabet(alphabetArr);
+        for(int i = 0; i < alphabet.getAlphabet().length; i++)
+            System.out.println(alphabet.getAlphabet()[i]);
     }
 }
