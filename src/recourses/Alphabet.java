@@ -1,3 +1,5 @@
+package recourses;
+
 public class Alphabet {
     char[] alphabet;
     public int length;

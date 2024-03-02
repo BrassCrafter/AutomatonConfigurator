@@ -1,18 +1,25 @@
+package recourses;
+
 public class State {
     List<State>[] listsOfFollowingStates;
     private final String name;
+    private final int index;
     private boolean isFinalState = false;
-    public State(String name) {
+    public State(String name, int index) {
         this.name = name;
+        this.index = index;
     }
     public String getName(){
-        return name;
+        return this.name;
+    }
+    public int getIndex(){
+        return this.index;
     }
     public void setFinalStateTrue(){
-        isFinalState = true;
+        this.isFinalState = true;
     }
     public boolean isFinalState(){
-        return isFinalState;
+        return this.isFinalState;
     }
 }
 
