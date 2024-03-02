@@ -1,16 +1,21 @@
 public class Alphabet {
     char[] alphabet;
+    public int length;
     public Alphabet(char[] alphabet){
         this.alphabet = alphabet;
+        this.length = alphabet.length;
     }
     public char[] getAlphabet(){
         return alphabet;
     }
-    public boolean isInAlphabet(char character){
-        for(int i = 0; i < alphabet.length; i++)
-            if(alphabet[i] == character)
-                return true;
-        return false;
+    public int whereIsIt(char character) {
+        for (int i = 0; i < alphabet.length; i++)
+            if (alphabet[i] == character)
+                return i;
+        return -1;
+    }
+    public char getCharAt(int i){
+        return alphabet[i];
     }
 
     public static void main(String[] args) {

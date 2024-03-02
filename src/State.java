@@ -1,16 +1,12 @@
 public class State {
     List<State>[] listsOfFollowingStates;
+    private final String name;
     private boolean isFinalState = false;
-    public State(int lengthOfAlphabet) {
-        listsOfFollowingStates = new List[lengthOfAlphabet];
+    public State(String name) {
+        this.name = name;
     }
-
-    public List<State> getFollowingStatesOf(int i) {
-        return listsOfFollowingStates[i];
-    }
-
-    public void setFollowingStateOf(int i, List<State> followingStates) {
-        listsOfFollowingStates[i].concat(followingStates);
+    public String getName(){
+        return name;
     }
     public void setFinalStateTrue(){
         isFinalState = true;

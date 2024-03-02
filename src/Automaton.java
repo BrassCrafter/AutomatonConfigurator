@@ -1,15 +1,12 @@
 public class Automaton {
     Alphabet alphabet;
-    State[] states;
-    public Automaton(int numberOfStates){
-        states = new State[numberOfStates];
-        for(int i = 0; i < states.length; i++){
-            states[i] = new State(alphabet.getAlphabet().length);
-        }
-
+    Map map;
+    public Automaton(Map map, Alphabet alphabet){
+        this.map = map;
+        this.alphabet = alphabet;
     }
 
-    public void setAlphabet (Alphabet alphabet){
-        this.alphabet = alphabet;
+    public static void main(String[] args) {
+
     }
 }

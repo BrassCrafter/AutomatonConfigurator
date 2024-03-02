@@ -6,6 +6,8 @@ public class Map {
     public void addAssoziation(int indexOfState, int indexOfAlphabet, State assoziatedState){
         map[indexOfState][indexOfAlphabet].append(assoziatedState);
     }
-    public List<State> getAssoziation(int indexOfState, int indexOfAlphabet)
+    public List<State> getFollowingStatesOf(int indexOfState, int indexOfAlphabet){
+        return map[indexOfState][indexOfAlphabet];
+    }
 
 }
